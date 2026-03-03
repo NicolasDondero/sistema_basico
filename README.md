@@ -1,47 +1,46 @@
-📦 Sistema Básico de Gestión de Productos
+📦 Sistema de Gestión para Distribuidora
+Este proyecto es una aplicación web Full-Stack diseñada para la administración comercial de una distribuidora. Permite gestionar el inventario en tiempo real y registrar transacciones vinculadas a clientes específicos.
 
-Este proyecto es una aplicación web full-stack que simula un sistema básico de gestión comercial, permitiendo la administración de productos, vendedores y compradores.
+🚀 Funcionalidades Actuales
+El sistema ya cuenta con las siguientes capacidades operativas:
 
-El sistema permite:
+Gestión de Inventario (CRUD): * Crear, listar y eliminar productos.
 
-🔹 Crear, listar, editar y eliminar productos
+Control de stock físico (con alertas visuales cuando el stock es bajo).
 
-🔹 Registrar vendedores y asociarlos a productos
+Módulo de Ventas Inteligente: * Registro de ventas vinculando un Comprador con un Producto.
 
-🔹 Registrar compradores
+Automatización: El sistema descuenta automáticamente las unidades del stock al confirmar la venta.
 
-🔹 Gestionar operaciones básicas de compra
+Validación de stock disponible antes de procesar la transacción.
+
+Base de Datos Relacional: * Registro de Compradores con datos de contacto (Email, CUIT/CUIL).
+
+Historial de Ventas: Visualización detallada de quién compró qué, cuándo y en qué cantidad.
 
 🛠️ Tecnologías Utilizadas
+Frontend: React.js (Vite) + Axios para consumo de APIs.
 
-Frontend: React
+Backend: Node.js + Express.js.
 
-Backend: Node.js + Express
+Base de Datos: SQLite (Persistencia local mediante archivo .db).
 
-Base de datos: PostgreSQL
+🧩 Arquitectura del Proyecto
+La aplicación sigue una arquitectura Cliente-Servidor:
 
-La aplicación sigue una arquitectura cliente-servidor, donde el frontend consume una API REST desarrollada en Express, la cual interactúa con una base de datos relacional en PostgreSQL para la persistencia de datos.
+Frontend (React): Maneja la interfaz de usuario, los estados globales y las peticiones asíncronas al servidor.
 
-🧩 Arquitectura General
+API REST (Express): Expone los endpoints necesarios para que el frontend pueda leer y escribir datos. Contiene la lógica de negocio (como el cálculo de stock).
 
-React maneja la interfaz de usuario y el estado de la aplicación.
-
-Express expone endpoints REST para la gestión de entidades.
-
-PostgreSQL almacena la información estructurada de productos, vendedores y compradores.
-
-Separación clara de responsabilidades entre frontend, backend y base de datos.
+Capa de Datos (SQLite): Almacena de forma estructurada la información de productos, compradores y el historial transaccional mediante relaciones SQL.
 
 🎯 Objetivo del Proyecto
+El objetivo principal es consolidar el desarrollo Full-Stack, aplicando conceptos clave:
 
-El objetivo principal es practicar el desarrollo full-stack, aplicando conceptos como:
+Diseño y consumo de API REST.
 
-Diseño de API REST
+Modelado de datos relacional y consultas con Joins complejos.
 
-Modelado relacional de base de datos
+Sincronización de estados entre la interfaz y la base de datos.
 
-CRUD completo
-
-Conexión entre frontend y backend
-
-Manejo de estados y requests HTTP
+Manejo de errores y validaciones en el servidor.
